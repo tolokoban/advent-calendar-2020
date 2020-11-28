@@ -9,7 +9,7 @@ import './index.css'
 
 async function start() {
     // Set application theme.
-    await Font.loadJosefin(true)
+    await Font.loadIndieFlower(true)
     Theme.apply({
         color3: "#456",
         color0: "#123",
@@ -26,25 +26,6 @@ async function start() {
         </React.StrictMode>,
         document.getElementById('ROOT')
     )
-
-    // Remove splash screen.
-    removeSplashScreen()
-}
-
-
-function removeSplashScreen() {
-    const splash = document.getElementById('SPLASH')
-    if (splash) {
-        splash.classList.add("hide")
-        const VANISHING_TIME = 1000
-        window.setTimeout(
-            () => {
-                const parent = splash.parentNode
-                if (parent) parent.removeChild(splash)
-            },
-            VANISHING_TIME
-        )
-    }
 }
 
 

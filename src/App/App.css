@@ -1,8 +1,232 @@
+@keyframes light-animation-0 {
+    0% {
+        fill: #FD3
+    }
+
+    10% {
+        fill: #FF5
+    }
+
+    20% {
+        fill: #EE0
+    }
+
+    30% {
+        fill: #FA0
+    }
+
+    40% {
+        fill: #EE6
+    }
+
+    50% {
+        fill: #FD3
+    }
+
+    60% {
+        fill: #EB0
+    }
+
+    70% {
+        fill: #FF0
+    }
+
+    80% {
+        fill: #FD3
+    }
+
+    90% {
+        fill: #D80
+    }
+
+    100% {
+        fill: #FD3
+    }
+}
+
+@keyframes light-animation-1 {
+    0% {
+        fill: #FD3
+    }
+
+    10% {
+        fill: #D80
+    }
+
+    20% {
+        fill: #FF5
+    }
+
+    30% {
+        fill: #FA0
+    }
+
+    40% {
+        fill: #EE0
+    }
+
+    50% {
+        fill: #FD3
+    }
+
+    60% {
+        fill: #FF0
+    }
+
+    70% {
+        fill: #EE6
+    }
+
+    80% {
+        fill: #FD3
+    }
+
+    90% {
+        fill: #EB0
+    }
+
+    100% {
+        fill: #FD3
+    }
+}
+
+@keyframes light-animation-2 {
+    0% {
+        fill: #FD3
+    }
+
+    10% {
+        fill: #FF5
+    }
+
+    20% {
+        fill: #D80
+    }
+
+    30% {
+        fill: #FA0
+    }
+
+    40% {
+        fill: #FF0
+    }
+
+    50% {
+        fill: #FD3
+    }
+
+    60% {
+        fill: #EB0
+    }
+
+    70% {
+        fill: #EE0
+    }
+
+    80% {
+        fill: #FD3
+    }
+
+    90% {
+        fill: #EE6
+    }
+
+    100% {
+        fill: #FD3
+    }
+}
+
 .App {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("./background.webp");
+    background-size: cover;
+}
+
+.App section.calendar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    pointer-events: all;
+    opacity: 1;
+}
+
+.App section.calendar.hide {
+    opacity: 0;
+    pointer-events: none;
+    transition: all 1s;
+}
+
+.App section.calendar>div {
+    position: relative;
+    width: 16.6667vw;
+    height: 24vh;
+    overflow: hidden;
+}
+
+.App section.calendar>div>* {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 16.6667vw;
+    height: 24vh;
+}
+
+.App section.calendar>div>div.day {
+    color: #d60;
+    transition: color 1s;
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100%;
+    font-weight: 900;
+    font-size: 9vmin;
+    text-shadow: 0.5vmin 0 0.5vmin #000a,
+        0 0.5vmin 0.5vmin #000a,
+        -0.5vmin 0 0.5vmin #000a,
+        0 -0.5vmin 0.5vmin #000a;
+}
+
+.App section.calendar>div.open>div.day {
+    color: #fff;
+}
+
+
+.App section.calendar>div.open>svg.curtain .bar-0 {
+    transform: translateY(-10%);
+}
+
+.App section.calendar>div.open>svg.curtain .bar-1 {
+    transform: translateY(-20%);
+}
+
+.App section.calendar>div.open>svg.curtain .bar-2 {
+    transform: translateY(-30%);
+}
+
+.App section.calendar>div.open>svg.curtain .bar-3 {
+    transform: translateY(-40%);
+}
+
+.App section.calendar>div.open>svg.curtain .bar-4 {
+    transform: translateY(-50%);
+}
+
+@media (orientation: portrait) {
+    .App section.calendar {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .App section.calendar>div,
+    .App section.calendar>div>* {
+        width: 25vw;
+        height: 16vh;
+    }
 }

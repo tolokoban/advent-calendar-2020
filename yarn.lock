@@ -1426,6 +1426,11 @@
   dependencies:
     "@types/node" "*"
 
+"@types/seed-random@^2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@types/seed-random/-/seed-random-2.2.0.tgz#38a1acb76ba12cc79b98cfa77962773d3ff0764c"
+  integrity sha512-cQzmJjnYeGTZ6yrSljKUpBXim39c9cRwpTFArZzSdD3Jp5G1Le4YS+OUxf0KaI3AD+DRaSzDV0NH13U1N6CZ3g==
+
 "@types/source-list-map@*":
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/@types/source-list-map/-/source-list-map-0.1.2.tgz#0078836063ffaf17412349bba364087e0ac02ec9"
@@ -7213,6 +7218,11 @@ schema-utils@^3.0.0:
     ajv "^6.12.5"
     ajv-keywords "^3.5.2"
 
+seed-random@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/seed-random/-/seed-random-2.2.0.tgz#2a9b19e250a817099231a5b99a4daf80b7fbed54"
+  integrity sha1-KpsZ4lCoFwmSMaW5mk2vgLf77VQ=
+
 select-hose@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/select-hose/-/select-hose-2.0.0.tgz#625d8658f865af43ec962bfc376a37359a4994ca"
@@ -7886,10 +7896,10 @@ text-table@0.2.0:
   resolved "https://registry.yarnpkg.com/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
   integrity sha1-f17oI66AUgfACvLfSoTsP8+lcLQ=
 
-tfw@^0:
-  version "0.53.4"
-  resolved "https://registry.yarnpkg.com/tfw/-/tfw-0.53.4.tgz#a9d33793c2e8d200cb2a978f84e5bbda5ac3c6ef"
-  integrity sha512-KaAAEda892f19OlAAsvpaDdJihnOkesOGtsD7OcNdhThorvxqm7jwKxxVq9xkhc8L0cvDpIefYotjHAjCyDEFw==
+tfw@^0.55.0:
+  version "0.55.0"
+  resolved "https://registry.yarnpkg.com/tfw/-/tfw-0.55.0.tgz#e2240f1cbb297dcfa70d20265cb6dabfa1868e42"
+  integrity sha512-wSMw4XRUxO0D/9bsULw9C1J6Rv6nh9BRFcMixKk1kZzmsxFScVW3CSYWUYcbLJRLK2Z3PUf3lt9Zsp4C9jGbcA==
   dependencies:
     "@types/react" "^16.9.17"
     "@types/react-dom" "^16.9.4"

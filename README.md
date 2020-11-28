@@ -1,6 +1,6 @@
-# Template for React App with Typescript and TFW
+# One mini game per day to wait Christmass
 
-See it live: https://tolokoban.github.io/template-react-typescript/
+See it live: https://tolokoban.github.io/advent-calendar-2020/
 
 ----
 
@@ -14,17 +14,6 @@ yarn
 ```bash
 npm install
 ```
-
-**You will need to change the name of your project in `package.json`**  
-Then you will be able to run `npm install` or `yarn`.
-
-The following script will setup a Byobu environment for you:
-
-```bash
-./scripts/byobu.sh
-```
-
-----
 
 ## Available Scripts
 
