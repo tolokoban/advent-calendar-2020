@@ -1,0 +1,45 @@
+.view-GameView {
+    font-size: 3vmin;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+.view-GameView>* {
+    flex: 1 1 auto;
+}
+
+.view-GameView>header>div.back-button {
+    height: 2em;
+    width: 2em;
+    border-radius: 0 50% 50% 0;
+    box-shadow: .05em 0 .1em var(--thm-color-shadow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.view-GameView>header>div.help-button {
+    height: 2em;
+    width: 2em;
+    border-radius: 50%  0 0 50%;
+    box-shadow: -.05em 0 .1em var(--thm-color-shadow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.view-GameView>header {
+    flex: 0 0 auto;
+    height: 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}

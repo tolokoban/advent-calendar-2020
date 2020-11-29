@@ -131,6 +131,13 @@ module.exports = {
                 }
             },
             {
+                test: /\.(txt)$/,
+                loader: "file-loader",
+                options: {
+                    name: "dat/[contenthash].[ext]"
+                }
+            },
+            {
                 test: /\.ya?ml$/,
                 type: 'json',
                 use: 'yaml-loader'

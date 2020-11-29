@@ -32,8 +32,9 @@ declare module "*.webp" {
 }
 
 declare module "*.txt" {
-    const value: any
-    export = value
+    // Loaded as URL.
+    const content: string
+    export default content
 }
 
 declare module "*.css" {

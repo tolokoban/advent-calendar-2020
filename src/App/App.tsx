@@ -8,6 +8,7 @@ import background from './background.webp'
 import Random from '../random'
 import Touchable from "tfw/view/touchable"
 import castInteger from 'tfw/converter/integer'
+import GoodLevelOfBeerView from "../game/good-level-of-beer"
 
 import "./App.css"
 
@@ -34,11 +35,14 @@ export default class App extends React.Component<IAppProps, IAppState> {
             removeSplashScreen()
             window.setTimeout(this.getCurrentDate, 1200)
         }
-        window.addEventListener('hashchange', () => {
-            const hash = window.location.hash.substr(1)
-            const page = castInteger(hash, 0)
-            this.setState({ page })
-        })
+        this.handleHashChange()
+        window.addEventListener('hashchange', this.handleHashChange)
+    }
+
+    private readonly handleHashChange = () => {
+        const hash = window.location.hash.substr(1)
+        const page = castInteger(hash, 0)
+        this.setState({ page })
     }
 
     private readonly getCurrentDate = () => {
@@ -57,7 +61,7 @@ export default class App extends React.Component<IAppProps, IAppState> {
             className={open ? "open" : "closed"}
         >
             <svg
-                preserveAspectRatio="xMidYMid meet" 
+                preserveAspectRatio="xMidYMid meet"
                 viewBox="-60 -60 120 120"
             >
                 <defs>
@@ -131,17 +135,23 @@ export default class App extends React.Component<IAppProps, IAppState> {
         </Touchable>
     }
 
+    private readonly handleBack = () => {
+        this.setState({ page: 0 })
+    }
+
     render() {
         g_random.reset("Tolokoban")
         const classes = ['App']
         if (this.props.className) classes.push(this.props.className)
         const range = createRange(1, DAYS_BEFORE_CHRISTMAS)
         const { day, page } = this.state
-        const realPage = page > day ? 0 : page
+        const game = page > day ? 0 : page
 
         return (<div className={classes.join(' ')}>
-            <div>Hello, world!</div>
-            <section className={`calendar ${realPage > 0 ? "hide" : ""}`}>
+            {
+                game === 1 && <GoodLevelOfBeerView />
+            }
+            <section className={`calendar ${game > 0 ? "hide" : ""}`}>
                 {
                     range.map(day => this.renderDay(day))
                 }

@@ -1,0 +1,1 @@
+{"version":3,"file":"random.d.ts","sourceRoot":"","sources":["../src/random.ts"],"names":[],"mappings":"AAGA,MAAM,CAAC,OAAO,OAAO,MAAM;IACvB,OAAO,CAAC,SAAS,CAA0B;IAE3C,KAAK,CAAC,IAAI,EAAE,MAAM;IAIlB;;OAEG;IACH,KAAK,CAAC,MAAM,EAAE,MAAM,EAAE,MAAM,EAAE,MAAM,GAAG,MAAM;CAIhD"}

@@ -1,1 +1,6 @@
 .game-GoodLevelOfBeerView {}
+
+.game-GoodLevelOfBeerView > div.glasses {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}

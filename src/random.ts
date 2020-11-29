@@ -15,4 +15,11 @@ export default class Random {
         const rnd = this.generator()
         return center + (rnd + rnd - 1) * radius
     }
+
+    /**
+     * Return an integer number between `min` and `max`.
+     */
+    pickInRange(min: number, max: number): number {
+        return Math.floor(min) + (Math.ceil(max - min) * this.generator())
+    }
 }
